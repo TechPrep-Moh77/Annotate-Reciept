@@ -18,7 +18,7 @@ from typing import Annotated
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'vertexai_key.json'
 
 # Define project information
-PROJECT_ID = "csc221-kamagate63825"  # @param {type:"string"}
+PROJECT_ID = ""  # @param {type:"string"} removed for security purposes
 LOCATION = "us-central1"  # @param {type:"string"}
 client = genai.Client(vertexai=True, project=PROJECT_ID, location=LOCATION)
 

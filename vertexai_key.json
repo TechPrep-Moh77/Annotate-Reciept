@@ -1,10 +1,10 @@
 {
     "type": "service_account",
-    "project_id": "csc221-kamagate63825",
+    "project_id": "",//removed for security purposes
     "private_key_id": "e55d43e8aff36b0a4ecc099c8f8cf0cf03b88ad8",
     "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCBU6neG6M2QdWi\nznC5b18J+IC7nCTnErZeMJbLjCsKvtEqMp41lYf1iPtLD5U92Lrt1q35eR3jgEAm\nQp0XNsaUDL8uQlnl/lqg7cRhJ/0lfYPCf/ey9UWKEcrR8f+LfWu+8HrA649OP1gE\naSe3+JYUzkU8XS9TXNdmJZ20LsNpNhoylK9lSAn1pTRoH0tMIiS0Y78Rus8TQLcM\nShJBjbvH3+M6zQYDLIicCE1qIXKnJKR2oXutwPGzU7FVzJllG0lS6ZDE2OzJiE6Y\nO01Tm1pRDQnLK967AV+TZsFZ3YITLpsJJ/dNyTLj/YifMdm1K46unjC5GuRW2aKp\no6dEg5W3AgMBAAECggEAPfM3SEuB69Auh64PRmzIoGyXMgeSj9QhYs4wtfF/fsa4\nSFf1/GIUPjRvd93PllA2/w5ayUnQ3PVHBWzcdk3JYwsWG5EyIh+tBzDOZOH0fBx7\nXNTS8TlXpdNvDhG34XhjgBQPIVHVlFx4i6hZm+Fq9y118fwLWwn6rpYvTKwn9EIF\niPwiBsn97r43gufaw0jkjj8M11Mp/r4YGacFv5Kig4Nv2lW5Sz2aI8AUlzDKifwN\nuatx0AP/MJ/BD6jn+m2F8SGJ1IvLIcRN8eNoju5rXY7PN8go65FTtNTZLEmK5fPF\nadRBOzlMD8aVI0dYxvCO+G2pbkRwSMs0nZ8ocOOqyQKBgQC2AAxHwLtZV/39ETK+\nvRbANQHPNS+7fZ2kjg9u0/oeQevgEcXV9GtLi2xMzVfKVxCdYvvAkCqlOrzo7c5B\n48dM8nZJ75D7/Vkklr0PIkbeUhEuu+qnGlB6Evn8VS1FHVXIXrv8V7mkAWPxUytB\nepsxbvwm/aOfigs+7FV0v1966QKBgQC16Pkqeuyr2Pr9arALgwX+3LbzmOjLT7xF\nZmNiKIAWqoXN/Hy+I4iS0cKsLpvB+AdXbg44LZ/lG2UnF/HRwnZqWhX4/CgnGB2q\nsPfV/8qRaxEh/LZZAJ+MrUha+8k1vlyrwWRNZEPodlv76sp9tTOcav1Zi6o672j/\nIlJkcR7nnwKBgFrNMVNHI/GSRgTRZMjm3AfvKkTv2y2moVTtD2QS3DHmX8E9/L8f\nH7zkBZdXx5oK0B5FuSa8hppC8OchZgtXkiKgwUVoAaTHJIdtsUtwpXzb4vi3Bn5y\nUX5mI1SyRlC6Lwc1xIJEXjkl/G/1N5qGihEityjY2J6LJ8sv6/7AT+mpAoGAN+s/\n/PEAo+r1bMVJDKDgTPIoQ0Wz+huusl7BGkF87nrI2wNMjV568zcL8sX5F21ZRGUO\ndfKAfnsnYxcXPPXcVOEQdBN/fFULeZcg+GXDLWSORbZbj4yDf0kdPuq7dYvpDNtM\nLAYwYdtQd2Y7jN0Q2nqBGu+2Cpvh2NwCG+IyL90CgYB18TkFZfnkB4YSRragsRVj\nF3HU2BINd/LJPUtIRQXR+iBZk/AjcowU/73hl0yO5iXK5+z0L2aVwlXxLAwu8lH0\n18v+XE/ZsZRx7uJn0Do75c+fPI3zm8qMWaZr5r6OZ3towfvFoWAV4niK3lobMDXq\nt48bxKh6tr4SYVLKDLtkpA==\n-----END PRIVATE KEY-----\n",
-    "client_email": "kamagate-serviceaccount-2025@csc221-kamagate63825.iam.gserviceaccount.com",
-    "client_id": "112330533194808363289",
+    "client_email": "",//removed for secutiyy
+    "client_id": "",//removed for security
     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
     "token_uri": "https://oauth2.googleapis.com/token",
     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
