@@ -1,0 +1,110 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSC 221 - FastAPI Application</title>
+</head>
+<body>
+  Hello, World! This is a simple FastAPI application running on Google App Engine. test
+  <form method ="post" action="/annotate_receipt" enctype="multipart/form-data">
+
+  <input type="file" name="photo" />
+  <button type="submit">submit</button>
+</form>
+</body>
+</html> -->
+<!-- proffessor -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSC 221 - Final Challenge</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    .container { max-width: 400px; margin: auto; }
+    label { display: block; margin-bottom: 0.5rem; }
+    input[type="file"], input[type="number"] { display: block; margin-bottom: 1rem; width: 100%; box-sizing: border-box; padding: 0.5rem; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; }
+    #preview { max-width: 100%; margin-top: 1rem; display: none; }
+    #status { font-weight:bold; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    Spring 2025 - EMPL_ID <b>23981284 - test</b>
+    <hr />
+    <h2>CSC 221 - Final Challenge</h2>
+    <form id="uploadForm">
+      <label for="photoInput">Choose or take a receipt photo:</label>
+      <input type="file" id="photoInput" name="photo" accept="image/*" required>
+
+      <label for="taxRate">New Tax Rate (%):</label>
+      <input type="number" id="taxRate" name="taxRate" min="0" max="100" step="0.01" required>
+
+      <button type="submit">Annotate</button>
+    </form>
+    <img id="preview" alt="Image Preview">
+    <p id="status"></p>
+  </div>
+
+  <script>
+    const photoInput = document.getElementById('photoInput');
+    const preview = document.getElementById('preview');
+    const taxRateInput = document.getElementById('taxRate');
+
+    photoInput.addEventListener('change', function() {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        }
+        reader.readAsDataURL(file);
+      } else {
+        preview.style.display = 'none';
+      }
+    });
+
+    document.getElementById('uploadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const file = photoInput.files[0];
+      const taxRate = parseFloat(taxRateInput.value);
+      if (!file || isNaN(taxRate) || taxRate < 0 || taxRate > 100) {
+        document.getElementById('status').textContent = 'Please provide a valid photo and tax rate (0–100).';
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('tax_rate', taxRate);
+      formData.append('photo', file);
+
+      try {
+        const response = await fetch('/annotate_receipt', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.json();
+        let status = document.getElementById('status');
+        if (result.amount_before_tax) {
+          status.innerHTML = `The amount before tax was $${result.amount_before_tax}.`.fontcolor('SteelBlue')
+        } else {
+          status.innerHTML = (result.error || 'Cannot extract the amount before tax.').fontcolor('IndianRed');
+        }
+
+        if (result.receipt && result.receipt.data && result.receipt.mimeType) {
+          preview.src = `data:${result.receipt.mimeType};base64,${result.receipt.data}`;
+          preview.style.display = 'block';
+        }
+
+      } catch (error) {
+        status.innerHTML = (error.toString() || 'Annotation failed.').fontcolor('IndianRed');
+      }
+    });
+  </script>
+</body>
+</html>
